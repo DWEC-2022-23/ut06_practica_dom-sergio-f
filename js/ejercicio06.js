@@ -53,10 +53,16 @@ let addItemButton = "";
 
  function MostrarOcultarLista(){
   // Muestra u oculta la información de las cosas que son violeta (listDiv)
+  if(!listDiv.classList.contains('hidden')){
+    listDiv.classList.toggle('hidden');
+  }else{
+    listDiv.classList.toggle('hidden');
+  }
  }
  function CambiarTextoLista(){
   //Modifica  el texto de la lista (descriptionP) con el valor del input (descriptionInput).
   // Inicialmente COSAS QUE SON VIOLETA
+  descriptionP.innerText = descriptionInput.value;
  }
  function AñadirElemento(){
   //Añade un nuevo elemento a la lista con el valor del input (addItemInput). 

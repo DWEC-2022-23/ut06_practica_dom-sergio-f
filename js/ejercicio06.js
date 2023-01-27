@@ -82,18 +82,22 @@ let addItemButton = "";
  function CambiarTextoLista(){
   //Modifica  el texto de la lista (descriptionP) con el valor del input (descriptionInput).
   // Inicialmente COSAS QUE SON VIOLETA
-  descriptionP.innerText = descriptionInput.value;
+  if(descriptionInput.value != ""){
+    descriptionP.innerText = descriptionInput.value;
+  }
  }
  
  function AñadirElemento(){
   //Añade un nuevo elemento a la lista con el valor del input (addItemInput). 
   //Recuerda que el elemento tendrá que tener sus botones de subir, bajar y borrar.
   let inputValue = addItemInput.value;
-  let li = document.createElement("li");
-  li.innerText = inputValue;
-  listUl.appendChild(li);
-  attachListItemButtons(li);
-  addItemInput.value = "";
+  if(inputValue != ""){
+    let li = document.createElement("li");
+    li.innerText = inputValue;
+    listUl.appendChild(li);
+    attachListItemButtons(li);
+    addItemInput.value = "";
+  }
  }
 
 
